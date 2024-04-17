@@ -1,0 +1,9 @@
+[submodule "repos/axonal_connectomics"]
+	path = repos/axonal_connectomics
+	url = git@github.com:AllenInstitute/axonal_connectomics.git
+[submodule "repos/ac_segmentation"]
+	path = repos/ac_segmentation
+	url = git@github.com:AllenInstitute/ac_segmentation.git
+[submodule "repos/ac_reconstruction_analysis"]
+	path = repos/ac_reconstruction_analysis
+	url = git@github.com:AllenInstitute/ac_reconstruction_analysis.git
