@@ -1,5 +1,5 @@
 [submodule "ac_segmentation"]
 	path = ac_segmentation
 	url = https://github.com/AllenInstitute/ac_segmentation.git
-	branch = master
+	branch = auto-update
 
