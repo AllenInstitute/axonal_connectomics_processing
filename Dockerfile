@@ -1,5 +1,5 @@
 FROM continuumio/miniconda3:23.10.0-1 as acpreprocessing
-RUN conda update -y conda && conda install python=3.11 && conda clean -a
+RUN conda update -y conda && conda install python=3.10 && conda clean -a
 
 SHELL ["/bin/bash", "-c"]
 
