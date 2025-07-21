@@ -22,4 +22,4 @@ jobs:
       - name: Run unit tests in container
         run: |
           docker run --rm myimage /bin/bash -c "
-            pytest ac_deploy/repos/ac_segmentation/test"
+            pytest ac_deploy/repos/ac_segmentation/test && pytest ac_deploy/repos/ac_reconstruction_analysis/test"
