@@ -1,4 +1,4 @@
-This monorepo is composed of three submodules, each pertaining to different method categories. 
+## This monorepo is composed of three submodules, each pertaining to different method categories. 
 
 Image based pre-processing and stitching methods: https://github.com/AllenInstitute/axonal_connectomics.git
 
