@@ -7,3 +7,6 @@
 [submodule "repos/ac_reconstruction_analysis"]
 	path = repos/ac_reconstruction_analysis
 	url = git@github.com:AllenInstitute/ac_reconstruction_analysis.git
+[submodule "repos/ac_pcg"]
+	path = repos/ac_pcg
+	url = git@github.com:AllenInstitute/ac_pcg.git
