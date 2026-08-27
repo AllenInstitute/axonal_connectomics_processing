@@ -11,14 +11,15 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "coverage>=4.1",
-    "mock>=2.0.0",
+    # "mock>=2.0.0",
     "pep8>=1.7.0",
     # "pytest>4.6,<5.0",
     "pytest",
+    "pytest-mock",
     "pytest-cov>=2.2.1",
-    "pytest-pep8>=1.0.6",
+    # "pytest-flake8",
     "pytest-xdist>=1.14",
-    "flake8>=3.0.4",
+    # "flake8>=3.0.4",
     "pylint>=1.5.4",
     "jinja2",
     "ujson"
@@ -29,7 +30,10 @@ test = [
 # ]
 
 [build-system]
-requires = ["setuptools>=64", "setuptools_scm>=8"]
+requires = [
+    "setuptools>=64",
+    "setuptools_scm>=8",
+]
 build-backend = "setuptools.build_meta"
 
 # [tool.setuptools]
@@ -56,9 +60,14 @@ acanalysis = {path = "repos/ac_reconstruction_analysis", editable=true}
 ac_segmentation = {path = "repos/ac_segmentation", editable=true}
 acpreprocessing = {path = "repos/axonal_connectomics", editable=true}
 
+[tool.pixi.dependencies]
+rust = ">=1.80"
+hdf5 = "*"
+
 # conda-enabled features
 [tool.pixi.feature.pixi-base.dependencies]
-# gcc = ">=8.0.0"
+gcc = ">=8.0.0"
+rust = ">=1.80"
 # cython = "*"
 # numpy = "*"
 # pandas = "*"
@@ -68,9 +77,12 @@ acpreprocessing = {path = "repos/axonal_connectomics", editable=true}
 # h5py = "<=3.12.1"
 scikit-image = "*"
 # pybdv = "*"
+hdf5 = "*"
+gevent = "*"
 
 [tool.pixi.feature.jupyterlab.dependencies]
 jupyterlab = "*"
+gevent = "*"
 
 [tool.pixi.environments]
 conda-env = ["pixi-base"]
@@ -79,4 +91,18 @@ test = ["pixi-base", "test"]
 
 [tool.pixi.feature.jupyterlab.tasks]
 jlab = "jupyter lab"
+
+[tool.pixi.feature.test.tasks]
+test_ac_segmentation = {cmd = "pytest  --cov --cov-report=xml --junitxml=test-reports/test.xml", cwd="repos/ac_segmentation"}
+test_axonal_connectomics = {cmd = "pytest  --cov --cov-report=xml --junitxml=test-reports/test.xml", cwd="repos/axonal_connectomics"}
+test_ac_reconstruction_analysis = {cmd = "pytest  --cov --cov-report=xml --junitxml=test-reports/test.xml", cwd="repos/ac_reconstruction_analysis"}
+# test_ac_pcg = {cmd = "pytest  --cov --cov-report=xml --junitxml=test-reports/test.xml", cwd="repos/ac_pcg"}
+
+[tool.pixi.feature.test.tasks.test_all]
+depends-on = [
+    "test_ac_segmentation",
+    "test_axonal_connectomics",
+    "test_ac_reconstruction_analysis",
+    # "test_ac_pcg"
+]
 
