@@ -1,12 +1,12 @@
 [submodule "repos/axonal_connectomics"]
 	path = repos/axonal_connectomics
-	url = https://github.com/AllenInstitute/axonal_connectomics.git
-	branch = main
+	url = git@github.com:AllenInstitute/axonal_connectomics.git
 [submodule "repos/ac_segmentation"]
 	path = repos/ac_segmentation
-	url = https://github.com/AllenInstitute/ac_segmentation.git
-	branch = main
+	url = git@github.com:AllenInstitute/ac_segmentation.git
 [submodule "repos/ac_reconstruction_analysis"]
 	path = repos/ac_reconstruction_analysis
-	url = https://github.com/AllenInstitute/ac_reconstruction_analysis.git
-	branch = main
+	url = git@github.com:AllenInstitute/ac_reconstruction_analysis.git
+[submodule "repos/ac_pcg"]
+	path = repos/ac_pcg
+	url = git@github.com:AllenInstitute/ac_pcg.git
