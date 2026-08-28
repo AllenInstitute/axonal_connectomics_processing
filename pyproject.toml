@@ -67,6 +67,7 @@ hdf5 = "*"
 # conda-enabled features
 [tool.pixi.feature.pixi-base.dependencies]
 gcc = ">=8.0.0"
+gxx = "*"
 rust = ">=1.80"
 # cython = "*"
 # numpy = "*"
@@ -79,6 +80,8 @@ scikit-image = "*"
 # pybdv = "*"
 hdf5 = "*"
 gevent = "*"
+h5py = "*"
+python-igraph = "*"
 
 [tool.pixi.feature.jupyterlab.dependencies]
 jupyterlab = "*"

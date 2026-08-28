@@ -1,0 +1,84 @@
+# Pixi environments at any depth, including inside git submodules
+**/.pixi/
+**/.pixi/**
+
+# Conda environments occasionally created alongside projects
+**/.conda/
+**/conda-bld/
+
+# Python virtual environments
+**/.venv/
+**/venv/
+**/env/
+**/.env/
+
+# Python bytecode / caches
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.hypothesis/ 
+**/.tox/
+**/.nox/
+**/.coverage
+**/.coverage.*
+**/htmlcov/
+
+# Python build / packaging artifacts
+**/build/
+**/dist/
+**/*.egg-info/
+**/.eggs/
+**/*.egg
+**/pip-wheel-metadata/
+
+# Compiled extension artifacts generated locally
+**/*.so
+**/*.pyd
+**/*.dll
+**/*.dylib
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# IDE / editor files
+**/.idea/
+**/.vscode/
+**/.zed/
+**/*.swp
+**/*.swo
+**/*~
+
+# OS metadata
+**/.DS_Store
+**/Thumbs.db
+**/Desktop.ini
+
+# Logs / temporary files
+**/*.log
+**/*.tmp
+**/*.temp
+**/.cache/
+**/tmp/
+
+# # Git metadata
+# .git/
+# **/.git/
+
+# GitHub metadata usually isn't required inside runtime images.
+.github/
+
+# Docker / container output
+**/*.sif
+**/*.sqsh
+**/*.squashfs
+
+# Local environment / secrets
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+
