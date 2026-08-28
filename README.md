@@ -5,7 +5,7 @@ This repo serves to build and integrate software used for axonal connectomics
 Constituent packages are independently installable and integrated using git submodules, referenced in this table:
 | Module name | Repo | Description |
 | :--- | :--- | :---: |
-| acpreprocessing | [axonal_connectomics](https://github.com/AllenInsitute/axonal_connectomics) | image data preprocessing |
+| acpreprocessing | [axonal_connectomics](https://github.com/AllenInstitute/axonal_connectomics) | image data preprocessing |
 | ac_seg | [ac_segmentation](https://github.com/AllenInstitute/ac_segmentation) | voxel training and segmentation with skeletonization postprocessing |
 | acanalysis | [ac_reconstruction_analysis](https://github.com/AllenInstitute/ac_reconstruction_analysis) | skeletonized reconstruction analysis and skeleton-base alignment |
 | ac_pcg | [ac_pcg](https://github.com/AllenInstitute/ac_pcg) | chunkedgraph ingest and supervoxel generation for sparse skeleton + voxelization |
